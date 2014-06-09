@@ -1,0 +1,22 @@
+---
+- name: Gather facts
+  hosts: insieme
+  connection: local
+  gather_facts: no
+
+  tasks: 
+    - name: Pull facts from N9Ks
+      nxapi_get_facts:
+        host={{ inventory_hostname }}
+        user="admin"
+        passwd="Cisco.com"
+        logfile="insieme.log"
+      register: insieme
+    - name: Hardware Model
+      debug: msg={{ insieme.facts.HWFW.chassis_id }}
+    - name: NXOS Version
+      debug: msg={{ insieme.facts.HWFW.rr_sys_ver }}
+    - name: Host Name
+      debug: msg={{ insieme.facts.HWFW.host_name }}
+    - name: Serial Number
+      debug: msg={{ insieme.facts.HWFW.proc_board_id }}
