@@ -3,6 +3,7 @@
   hosts: insieme
   connection: local
   gather_facts: no
+  enabled: no
 
   tasks: 
     - name: Pull facts from N9Ks
@@ -20,3 +21,4 @@
       debug: msg={{ insieme.facts.HWFW.host_name }}
     - name: Serial Number
       debug: msg={{ insieme.facts.HWFW.proc_board_id }}
+

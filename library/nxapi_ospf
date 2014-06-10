@@ -1,0 +1,81 @@
+#!/usr/bin/env python2.7
+
+# Copyright (c) 2014 Matt Oswalt
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at:
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+# implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
+from nxos.nxapi.utils.nxapi_utils import NXAPI
+import logging
+import json
+
+def ospfVerify(thisNXAPI, localPort, remotePort, neighborIPv4):
+    """NeighborInfo is the dictionary for all leaves. thisNXAPI is existing conn
+        to spine.
+
+        Connects to both switches in a pair and validates OSPF operation
+    """
+    
+    ospfReport = dict()
+
+    logging.info("Hello -------- " + neighborIPv4)
+
+    #thisNXAPI.set_cmd('show cdp neigh det')
+    #returnList = thisNXAPI.send_req()
+    #returnDict = json.loads(returnList[1])
+    #hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
+   
+    return ospfReport
+
+
+def main():
+    module = AnsibleModule(
+        argument_spec=dict( \
+            host=dict(required=True), \
+            user=dict(required=False, default='admin'), \
+            passwd=dict(required=False, default=None), \
+            #operation=dict(required=True, default=None), \
+            localPort=dict(required=True, default=None), \
+            remotePort=dict(required=True, default=None), \
+            neighborIPv4=dict(required=True, default=None), \
+            logfile=dict(required=False, default=None)), \
+        supports_check_mode=False)
+
+    m_args = module.params
+    m_results = dict(changed=False)
+
+    #Configure logging
+    logfile = module.params.get('logfile')
+    if logfile is not None:
+        logging.basicConfig(filename=logfile, level=logging.INFO, \
+          format='%(asctime)s:%(name)s:%(message)s')
+        logging.getLogger().name = 'CONFIG:'+m_args['host']
+
+    logging.info("Connecting to host: {}".format(m_args['host']))
+
+    thisNXAPI = NXAPI()
+    thisNXAPI.set_target_url('http://' + m_args['host'] + '/ins')
+    thisNXAPI.set_username(m_args['user'])
+    thisNXAPI.set_password(m_args['passwd'])
+    thisNXAPI.set_out_format('json')
+    thisNXAPI.set_msg_type('cli_show')
+
+    m_results['ospfReport'] = ospfVerify(thisNXAPI, m_args['localPort'],
+            m_args['remotePort'], m_args['neighborIPv4'])
+    
+    m_results['args'] = m_args        # for debug
+    module.exit_json(**m_results)
+
+from ansible.module_utils.basic import *
+main()
+
+
