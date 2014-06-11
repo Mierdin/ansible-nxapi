@@ -10,13 +10,13 @@ Work in progress, please see [library](library) directory for modules.  The modu
 
 This repo assumes you have the DEPENDENCIES installed on your system.  You can then `git clone` this repo and run the `env-setup` script in the repo directory:
 
-    user@ansible-junos-stdlib> source env-setup
+    user@ansible-nxapi> source env-setup
     
 This will set your `$ANSIBLE_LIBRARY` variable to the repo location and the installed Ansible library path.  For example:
 
 ````
-[jeremy@ansible-junos-stdlib]$ echo $ANSIBLE_LIBRARY
-/home/jeremy/Ansible/ansible-junos-stdlib/library:/usr/share/ansible
+[mierdin@ansible-nxapi]$ echo $ANSIBLE_LIBRARY
+/home/mierdin/Ansible/ansible-nxapi/library:/usr/share/ansible
 ````
 Alternatively you can copy the files in the [library](library) directory into the ansible installed directory: library/net_infrastructure
 
@@ -25,8 +25,7 @@ Alternatively you can copy the files in the [library](library) directory into th
 Thes modules require the following to be installed on the Ansible server:
 
 * [Ansible](http://www.ansible.com) 1.5 or later
-* Junos [py-junos-eznc](https://github.com/Juniper/py-junos-eznc) v0.0.5 or later
-* Junos [netconify](https://github.com/jeremyschulman/py-junos-netconify) v0.1.0 or later
+* Matt's fork of [nexus9000](https://github.com/mierdin/nexus9000) (be sure to build)
 
 
 

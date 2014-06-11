@@ -33,11 +33,72 @@ def ospfVerify(thisNXAPI, localPort, remotePort, neighborIPv4):
     #neighborInfo['remotePort']
     #neighborInfo['neighborIPv4']
 
-    #thisNXAPI.set_cmd('show cdp neigh det')
-    #returnList = thisNXAPI.send_req()
-    #returnDict = json.loads(returnList[1])
-    #hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
-   
+    #need to see if there is a neighbor on the other side
+    #TODO: This is obviously catered for p2p links - need to \
+            # be able to handle multiple neighbors
+    thisNXAPI.set_cmd('show ip ospf nei int ' + localPort)
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+
+    try:
+        neighborDict = returnDict['ins_api']['outputs']['output']['body'] \
+                ['TABLE_ctx']['ROW_ctx']['TABLE_nbr']['ROW_nbr']
+        ospfReport['state'] = neighborDict['state']
+        ospfReport['uptime'] = neighborDict['uptime']
+
+    except KeyError: #This is thrown if there is no neighbor
+        ospfReport['nei_status'] = 'DOWN'
+        ospfReport['nei_uptime'] = 'none'
+
+
+    #time to gather more info
+    thisNXAPI.set_cmd('show ip ospf int ' + localPort)
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+    for proc in returnDict['ins_api']['outputs']['output']['body'] \
+            ['TABLE_ctx']['ROW_ctx']:
+                #TODO: Note that ROW_ctx is a array. Shows up in other places 2
+        
+        # TODO: This is obviously bad, as it's statically setting the
+        # OSPF process name. Need to re-do to handle multiple processes.   
+        # best approach may be to specify the process name in the NXOS cmd
+        if proc['ptag'] == 'CLOS':
+            iface = proc['TABLE_intf']['ROW_intf']
+
+            #Here I'm just capturing all I can about this interface to be
+            #compared with the other switch's interface.
+            ospfReport['ifname'] = iface['ifname']  
+            ospfReport['admin_status'] = iface['admin_status']  
+            ospfReport['proto_status'] = iface['proto_status']
+            ospfReport['addr'] = iface['addr']
+            ospfReport['masklen'] = iface['masklen']
+            ospfReport['hello_interval'] = iface['hello_interval']
+            ospfReport['dead_interval'] = iface['dead_interval']
+            #There is also a "wait_interval" parameter - check this out
+            ospfReport['auth_type'] = iface['auth_type']
+            ospfReport['area'] = iface['area']
+            #ospfReport[''] = iface['']
+            #ospfReport[''] = iface['']
+    
+    #need to gather area information now
+    thisNXAPI.set_cmd('show ip ospf CLOS') 
+    #TODO: static process again, either make dynamic here, or loop through all
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+    
+    #TODO: That stupid ROW issue (list or not list, etc)
+    #for area in returnDict['ins_api']['outputs']['output']['body'] \
+           # ['TABLE_ctx']['ROW_ctx']['TABLE_area']['ROW_area'].iteritems():
+    area = returnDict['ins_api']['outputs']['output']['body']['TABLE_ctx'] \
+            ['ROW_ctx']['TABLE_area']['ROW_area']
+  
+    #if area['aname'] == ospfReport['area']: #want the area our port is in
+    ospfReport['area_stub'] = area['stub']
+    ospfReport['area_nssa'] = area['nssa']
+    #ospfReport['area_auth'] = area['auth_type'] # area auth?
+        #break
+ 
+
     return ospfReport
 
 

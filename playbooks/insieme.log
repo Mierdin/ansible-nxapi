@@ -1243,3 +1243,207 @@
 --- NXAPI_OSPF ---  2014-06-11 03:57:39,034:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
 --- NXAPI_OSPF ---  2014-06-11 03:57:39,035:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
 --- NXAPI_OSPF ---  2014-06-11 03:57:39,035:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:39,570:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:39,571:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:40,276:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:40,355:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:41,475:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:41,541:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:42,648:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:42,715:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:44,022:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:09:44,095:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:09:45,420:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:09:45,420:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:09:45,420:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:09:45,420:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:07,444:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:07,446:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:08,132:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:08,196:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:09,394:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:09,467:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:10,570:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:11,809:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:12,923:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:11:14,113:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:11:16,719:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:11:16,719:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:11:16,725:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:11:16,725:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:43,417:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:43,417:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:44,154:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:44,211:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:45,360:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:45,461:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:46,587:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:46,651:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:47,774:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:12:47,840:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:12:49,194:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:12:49,194:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:12:49,202:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:12:49,203:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:29,956:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:29,957:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:30,623:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:30,679:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:31,850:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:31,924:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:33,018:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:33,096:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:34,189:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:13:34,264:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:13:36,649:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:13:36,649:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:13:36,650:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:13:36,650:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:13:37,100:CONFIG:10.2.1.9:(u'ROW_ctx', [{u'cname': u'default', u'ptag': u'1'}, {u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'if_priority': u'1', u'cost': u'1', u'proto_status': u'up', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT1S', u'index': u'1', u'addr': u'1.1.1.5', u'area': u'0.0.0.0', u'wait_interval': u'40', u'bdr_addr': u'1.1.1.5', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.6', u'nbr_total': u'1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'bdr_rid': u'172.16.3.1', u'state_str': u'BDR', u'dead_interval': u'40', u'dr_rid': u'1.1.1.2', u'nbr_flood': u'1', u'nbr_adjs': u'1'}}}])
+--- NXAPI_OSPF ---  2014-06-11 06:13:37,104:CONFIG:10.2.1.8:(u'ROW_ctx', [{u'cname': u'default', u'ptag': u'1'}, {u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'proto_status': u'up', u'dead_interval': u'40', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT2S', u'index': u'1', u'addr': u'1.1.1.1', u'area': u'0.0.0.1', u'wait_interval': u'40', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.1', u'dr_rid': u'172.16.2.1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'if_priority': u'1', u'state_str': u'DR', u'cost': u'1', u'nbr_total': u'0', u'nbr_flood': u'0', u'nbr_adjs': u'0'}}}])
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:45,375:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:45,375:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:46,030:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:46,097:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:47,278:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:47,461:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:48,445:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:48,632:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:49,621:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:15:49,822:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:15:51,185:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:15:51,185:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:15:51,185:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:15:51,185:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:05,240:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:05,240:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:05,912:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:05,964:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:07,136:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:08,091:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:08,311:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:09,259:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:09,487:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:10,427:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:23:11,799:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:23:11,799:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:23:11,800:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:23:11,800:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:37,920:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:37,920:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:38,585:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:38,640:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:39,879:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:40,131:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:41,052:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:41,298:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:42,221:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:23:42,466:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:23:44,919:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:23:44,919:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:23:44,920:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:23:44,920:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:23:45,382:CONFIG:10.2.1.8:1
+--- NXAPI_OSPF ---  2014-06-11 06:23:45,382:CONFIG:10.2.1.8:CLOS
+--- NXAPI_OSPF ---  2014-06-11 06:23:45,389:CONFIG:10.2.1.9:1
+--- NXAPI_OSPF ---  2014-06-11 06:23:45,389:CONFIG:10.2.1.9:CLOS
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:42,094:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:42,094:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:42,746:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:42,812:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:43,917:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:44,016:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:45,165:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:45,237:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:46,333:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:24:46,408:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:24:47,738:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:24:47,738:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:24:47,739:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:24:47,739:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:24:48,187:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:24:48,187:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'proto_status': u'up', u'dead_interval': u'40', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT0S', u'index': u'1', u'addr': u'1.1.1.1', u'area': u'0.0.0.1', u'wait_interval': u'40', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.1', u'dr_rid': u'172.16.2.1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'if_priority': u'1', u'state_str': u'DR', u'cost': u'1', u'nbr_total': u'0', u'nbr_flood': u'0', u'nbr_adjs': u'0'}}}
+--- NXAPI_OSPF ---  2014-06-11 06:24:48,191:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:24:48,191:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'if_priority': u'1', u'cost': u'1', u'proto_status': u'up', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT2S', u'index': u'1', u'addr': u'1.1.1.5', u'area': u'0.0.0.0', u'wait_interval': u'40', u'bdr_addr': u'1.1.1.5', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.6', u'nbr_total': u'1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'bdr_rid': u'172.16.3.1', u'state_str': u'BDR', u'dead_interval': u'40', u'dr_rid': u'1.1.1.2', u'nbr_flood': u'1', u'nbr_adjs': u'1'}}}
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:49,171:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:49,171:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:49,845:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:49,911:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:51,044:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:51,124:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:52,248:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:52,373:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:53,548:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:25:53,650:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:25:54,960:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:25:54,960:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:25:54,962:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:25:54,962:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:25:55,406:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:25:55,406:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'if_priority': u'1', u'cost': u'1', u'proto_status': u'up', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT4S', u'index': u'1', u'addr': u'1.1.1.5', u'area': u'0.0.0.0', u'wait_interval': u'40', u'bdr_addr': u'1.1.1.5', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.6', u'nbr_total': u'1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'bdr_rid': u'172.16.3.1', u'state_str': u'BDR', u'dead_interval': u'40', u'dr_rid': u'1.1.1.2', u'nbr_flood': u'1', u'nbr_adjs': u'1'}}}
+--- NXAPI_OSPF ---  2014-06-11 06:25:55,412:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:25:55,412:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'proto_status': u'up', u'dead_interval': u'40', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT4S', u'index': u'1', u'addr': u'1.1.1.1', u'area': u'0.0.0.1', u'wait_interval': u'40', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.1', u'dr_rid': u'172.16.2.1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'if_priority': u'1', u'state_str': u'DR', u'cost': u'1', u'nbr_total': u'0', u'nbr_flood': u'0', u'nbr_adjs': u'0'}}}
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:47,411:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:47,411:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:48,073:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:48,619:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:49,243:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:49,787:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:50,645:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:51,012:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:51,814:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:28:52,178:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:28:53,564:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:28:53,564:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:28:53,564:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:28:53,565:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:28:54,019:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:28:54,019:CONFIG:10.2.1.8:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'proto_status': u'up', u'dead_interval': u'40', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT6S', u'index': u'1', u'addr': u'1.1.1.1', u'area': u'0.0.0.1', u'wait_interval': u'40', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.1', u'dr_rid': u'172.16.2.1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'if_priority': u'1', u'state_str': u'DR', u'cost': u'1', u'nbr_total': u'0', u'nbr_flood': u'0', u'nbr_adjs': u'0'}}}
+--- NXAPI_OSPF ---  2014-06-11 06:28:54,021:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'1'}
+--- NXAPI_OSPF ---  2014-06-11 06:28:54,021:CONFIG:10.2.1.9:{u'cname': u'default', u'ptag': u'CLOS', u'TABLE_intf': {u'ROW_intf': {u'auth_type': u'none', u'if_priority': u'1', u'cost': u'1', u'proto_status': u'up', u'hello_interval': u'10', u'type_str': u'BROADCAST', u'hello_timer': u'PT9S', u'index': u'1', u'addr': u'1.1.1.5', u'area': u'0.0.0.0', u'wait_interval': u'40', u'bdr_addr': u'1.1.1.5', u'ifname': u'port-channel100', u'dr_addr': u'1.1.1.6', u'nbr_total': u'1', u'admin_status': u'up', u'rxmt_interval': u'5', u'link_lsa_crc': u'0', u'transmit_delay': u'1', u'masklen': u'30', u'if_cfg': u'true', u'link_lsa_cnt': u'0', u'bdr_rid': u'172.16.3.1', u'state_str': u'BDR', u'dead_interval': u'40', u'dr_rid': u'1.1.1.2', u'nbr_flood': u'1', u'nbr_adjs': u'1'}}}
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:38,355:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:38,355:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:39,007:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:39,381:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:40,175:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:40,548:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:41,349:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:41,718:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:42,516:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:37:42,941:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,260:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,260:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,261:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,261:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,971:CONFIG:10.2.1.9:(u'ROW_area', {u'auth_type': u'none', u'lsa_crc': u'0x2c910', u'passive_intf': u'0', u'total_intf': u'1', u'age': u'P1DT6H40M58S', u'last_spf_run_time': u'PT0S', u'loopback_intf': u'0', u'nssa': u'false', u'backbone_active': u'true', u'stub': u'false', u'no_summary': u'false', u'lsa_cnt': u'5', u'act_intf': u'1', u'spf_runs': u'5', u'aname': u'0.0.0.0'})
+--- NXAPI_OSPF ---  2014-06-11 06:37:44,974:CONFIG:10.2.1.8:(u'ROW_area', {u'auth_type': u'none', u'lsa_crc': u'0x983a', u'passive_intf': u'0', u'total_intf': u'1', u'age': u'PT44M21S', u'last_spf_run_time': u'PT0S', u'loopback_intf': u'0', u'nssa': u'false', u'stub_def_cost': u'1', u'stub': u'true', u'no_summary': u'false', u'lsa_cnt': u'1', u'act_intf': u'1', u'spf_runs': u'3', u'active': u'false', u'aname': u'0.0.0.1'})
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:05,792:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:05,792:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:06,453:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:06,514:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:07,630:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:07,728:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:08,840:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:08,906:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:10,055:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:40:10,120:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:40:11,454:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:40:11,454:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:40:11,455:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:40:11,455:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:40:12,157:CONFIG:10.2.1.9:(u'auth_type', u'none')
+--- NXAPI_OSPF ---  2014-06-11 06:40:12,167:CONFIG:10.2.1.8:(u'auth_type', u'none')
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:22,832:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:22,834:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:23,544:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:23,600:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:24,720:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:24,789:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:25,888:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:25,956:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:27,059:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 06:44:27,128:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 06:44:28,468:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 06:44:28,468:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 06:44:28,468:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 06:44:28,468:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
