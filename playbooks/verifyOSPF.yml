@@ -1,5 +1,5 @@
 ---
-- name: Build topology
+- name: Build topology, verify OSPF
   hosts: spine
   connection: local
   gather_facts: no
@@ -12,24 +12,7 @@
           passwd="Cisco.com"
           logfile="insieme.log"
       register: insieme
-    #- name: Show neighbors
-    #  debug: msg={{ item.value }}
-    #  with_dict: insieme.topo
 
-
-    #- name: Display CDP info
-    #debug: msg={{ item.value }}
-    #debug: - "{{ item[0].ROW_cdp_neighbor_detail_info.version }}" }}
-    #debug: msg={{ item.device_id }} on {{ item.intf_id }} managed via {{ item.v4mgmtaddr }}
-    
-
-
-- name: Verify OSPF
-  hosts: spine
-  connection: local
-  gather_facts: no
-
-  tasks:
     - name: Verify OSPF Information
       nxapi_ospf:
         host={{ inventory_hostname }}
