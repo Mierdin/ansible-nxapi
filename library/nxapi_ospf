@@ -19,8 +19,8 @@ import logging
 import json
 
 def ospfVerify(thisNXAPI, localPort, remotePort, neighborIPv4):
-    """NeighborInfo is the dictionary for all leaves. thisNXAPI is existing conn
-        to spine.
+    """NeighborInfo is the dictionary for all leaves. 
+        thisNXAPI is existing connnection to spine switch.
 
         Connects to both switches in a pair and validates OSPF operation
     """
@@ -28,6 +28,10 @@ def ospfVerify(thisNXAPI, localPort, remotePort, neighborIPv4):
     ospfReport = dict()
 
     logging.info("Hello -------- " + neighborIPv4)
+
+    #neighborInfo['localPort']
+    #neighborInfo['remotePort']
+    #neighborInfo['neighborIPv4']
 
     #thisNXAPI.set_cmd('show cdp neigh det')
     #returnList = thisNXAPI.send_req()
@@ -56,8 +60,10 @@ def main():
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
-        logging.basicConfig(filename=logfile, level=logging.INFO, \
-          format='%(asctime)s:%(name)s:%(message)s')
+        logging.basicConfig(filename=logfile, level=logging.INFO,
+                format='--- NXAPI_OSPF --- ' + 
+                ' %(asctime)s:%(name)s:%(message)s')
+				
         logging.getLogger().name = 'CONFIG:'+m_args['host']
 
     logging.info("Connecting to host: {}".format(m_args['host']))

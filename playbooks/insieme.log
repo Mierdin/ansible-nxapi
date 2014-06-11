@@ -613,3 +613,633 @@
 2014-06-10 19:00:10,737:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
 2014-06-10 19:00:10,737:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
 2014-06-10 19:00:10,737:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+2014-06-10 19:29:58,982:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 19:29:58,982:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 19:29:59,634:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:29:59,705:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:00,671:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:00,736:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:01,695:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:01,789:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:02,729:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:02,852:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:03,831:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:04,361:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 19:30:04,882:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 19:30:04,882:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:05,145:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:05,395:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 19:30:05,656:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 19:30:05,912:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 19:30:05,913:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:06,176:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 19:30:06,176:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:06,423:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 19:30:06,692:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 19:30:06,936:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 19:30:06,936:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 19:30:07,213:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 19:30:07,213:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:07,457:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 19:30:07,729:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 19:30:08,560:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 19:30:08,560:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:09,372:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 19:30:09,372:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 19:30:09,555:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:09,887:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 19:30:10,401:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 19:30:10,401:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:10,555:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:11,546:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:11,692:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:12,704:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:13,701:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 19:30:14,879:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 19:30:14,879:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+2014-06-10 19:30:14,879:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 19:30:14,879:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+2014-06-10 23:23:52,822:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:23:52,822:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:24:25,963:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:24:25,964:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:24:26,633:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:26,705:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:27,682:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:28,062:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:28,708:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:29,090:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:29,754:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:30,120:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:30,797:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:31,154:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:31,310:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:24:31,666:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:24:31,826:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:24:31,826:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:32,271:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:24:32,271:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:32,431:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:24:32,787:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:24:32,946:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:24:32,946:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:33,303:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:24:33,304:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:33,459:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:24:33,819:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:24:33,974:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:24:33,974:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:24:34,333:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:24:34,333:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:24:34,490:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:24:34,847:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:24:35,003:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:24:35,003:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:35,362:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:24:35,362:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:36,013:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:36,491:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:37,008:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:37,488:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:38,030:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:24:38,515:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:45,237:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:55:45,237:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:55:45,890:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:45,955:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:46,927:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:46,993:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:48,026:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:48,977:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:49,143:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:50,008:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:50,179:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:50,699:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:55:51,206:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:55:51,206:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:51,720:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:55:52,238:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:52,240:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:55:52,240:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:52,750:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:55:52,752:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:55:53,262:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:55:53,262:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:53,263:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:55:53,264:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:55:53,776:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:55:53,891:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:55:54,289:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:55:54,289:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:54,410:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:55:54,410:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:54,805:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:55:55,323:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:55:55,323:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:55:55,501:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:55,841:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:55:56,355:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:55:56,355:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:56,499:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:57,347:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:57,497:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:58,339:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:55:59,333:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:57:51,050:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:57:51,054:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:57:51,709:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:51,777:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:52,749:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:52,856:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:53,880:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:54,905:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:54,935:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:55,930:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:55,961:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:56,501:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:57:57,026:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:57,536:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:57:58,049:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:57:58,049:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:58,150:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:57:58,151:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:58,563:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:57:58,668:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:57:59,079:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:57:59,079:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:57:59,184:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:57:59,184:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:57:59,589:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:57:59,703:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:00,100:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:00,100:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:00,218:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:00,219:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:00,610:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:01,485:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:01,485:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:01,941:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:02,453:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:02,453:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:02,573:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:03,519:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:03,651:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:04,564:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:04,707:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:05,569:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:36,071:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:58:36,071:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:58:36,727:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:36,800:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:37,768:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:37,837:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:38,798:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:39,256:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:39,887:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:40,921:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:41,437:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:58:41,536:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:41,949:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:58:41,949:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:42,461:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:58:42,561:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:42,976:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:58:42,976:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:43,077:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:58:43,486:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:43,592:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:58:43,592:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:43,998:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:43,999:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:58:44,108:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:58:44,512:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:44,628:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:58:44,629:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:45,025:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:45,025:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:45,143:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:45,658:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:58:45,658:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:58:46,021:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:46,169:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:46,680:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:58:46,681:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:47,059:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:47,681:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:48,074:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:48,727:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:58:49,726:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:15,062:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-10 23:59:15,062:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-10 23:59:15,727:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:16,931:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:17,021:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:17,971:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:18,046:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:18,996:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:19,088:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:20,026:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:20,119:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:20,633:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:59:21,094:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:21,157:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:59:21,157:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:21,668:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:59:22,193:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:59:22,194:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:22,623:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:59:22,717:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:59:23,136:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-10 23:59:23,136:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:23,228:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:59:23,228:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-10 23:59:23,650:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:59:23,744:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:59:24,162:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-10 23:59:24,162:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:24,257:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:59:24,257:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:24,680:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:59:25,196:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-10 23:59:25,196:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-10 23:59:25,256:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:25,786:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:59:26,275:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:26,301:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-10 23:59:26,301:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:27,299:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:27,364:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:28,365:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-10 23:59:30,561:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:14,690:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:18:14,690:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:18:15,348:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:15,405:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:16,382:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:16,443:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:17,413:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:17,473:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:18,448:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:18,509:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:19,478:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:19,555:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:19,994:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:18:20,070:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:18:20,507:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:18:20,507:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:20,583:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:18:20,583:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:21,030:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:18:21,094:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:18:21,544:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:18:21,545:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:21,608:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:18:21,608:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:22,057:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:18:22,120:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:18:22,637:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:18:22,637:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:18:22,775:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:18:22,776:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:18:23,153:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:18:23,367:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:18:23,668:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:18:23,668:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:23,884:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:18:23,884:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:24,740:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:24,888:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:25,740:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:26,731:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:27,023:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:18:28,049:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:18,617:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:19:18,617:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:19:19,284:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:19,350:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:20,431:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:20,432:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:21,468:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:21,468:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:22,498:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:22,502:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:23,536:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:23,536:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:24,055:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:19:24,059:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:19:24,570:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:19:24,570:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:24,572:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:19:24,572:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:25,081:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:19:25,089:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:19:25,662:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:19:25,662:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:25,706:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:19:25,706:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:26,178:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:19:26,225:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:19:26,753:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:19:26,753:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:19:26,895:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:19:26,896:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:19:27,279:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:19:27,417:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:19:27,928:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:19:27,928:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:27,999:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:19:27,999:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:28,947:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:29,009:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:29,947:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:30,014:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:30,945:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:19:31,011:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:40,284:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:20:40,284:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:20:40,934:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:41,006:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:41,971:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:42,038:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:43,000:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:43,063:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:44,034:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:44,097:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:45,075:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:45,134:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:45,586:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:20:45,698:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:20:46,101:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:20:46,101:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:46,211:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:20:46,211:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:46,614:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:20:46,725:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:20:47,127:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:20:47,127:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:47,243:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:20:47,243:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:47,640:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:20:47,758:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:20:48,153:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:20:48,153:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:20:48,270:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:20:48,270:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:20:48,666:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:20:48,784:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:20:49,180:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:20:49,180:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:49,299:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:20:49,300:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:50,172:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:50,292:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:51,168:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:51,299:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:52,175:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:20:52,297:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:06,778:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:23:06,779:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:23:07,437:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:07,494:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:08,478:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:08,530:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:09,508:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:09,570:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:10,563:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:10,606:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:11,589:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:11,633:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:12,103:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:23:12,155:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:23:12,621:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:23:12,621:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:12,671:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:23:12,671:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:13,142:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:23:13,190:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:23:13,655:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:23:13,655:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:13,703:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:23:13,703:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:14,174:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:23:14,224:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:23:14,694:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:23:14,694:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:23:14,738:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:23:14,738:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:23:15,208:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:23:15,249:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:23:15,750:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:23:15,750:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:15,764:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:23:15,764:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:16,755:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:17,271:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:17,755:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:18,274:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:18,922:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:23:19,339:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:41,825:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:24:41,826:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:24:42,477:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:42,551:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:43,536:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:43,605:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:44,632:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:44,696:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:45,669:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:45,729:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:46,694:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:46,762:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:47,211:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:24:47,278:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:24:47,743:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:24:47,744:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:47,792:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:24:47,793:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:48,256:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:24:48,419:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:24:48,769:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:24:48,769:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:48,931:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:24:48,931:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:49,283:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:24:49,446:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:24:49,798:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:24:49,799:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:24:49,963:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:24:49,963:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:24:50,310:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:24:50,475:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:24:50,823:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:24:50,823:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:50,989:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:24:50,989:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:51,840:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:51,981:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:52,864:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:52,996:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:53,874:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:24:54,010:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:11,812:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 00:43:11,813:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 00:43:12,525:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:12,599:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:13,804:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:13,823:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:15,030:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:15,044:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:16,261:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:16,268:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:17,477:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:17,493:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:18,180:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:43:18,267:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:43:18,699:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:43:18,699:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:18,780:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 00:43:18,780:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:19,404:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:43:19,489:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:43:19,918:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:43:19,918:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:20,005:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 00:43:20,005:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:20,642:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:43:20,716:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:43:21,166:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:43:21,166:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 00:43:21,230:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 00:43:21,230:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 00:43:21,875:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:43:21,943:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:43:22,393:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:43:22,393:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:22,530:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 00:43:22,530:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:23,566:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:23,748:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:24,734:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:24,924:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:25,905:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 00:43:26,088:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:10,025:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 01:01:10,025:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 01:01:10,836:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:10,900:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:12,096:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:12,155:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:13,320:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:13,373:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:14,536:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:14,589:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:15,799:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:16,508:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 01:01:17,004:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:17,035:CONFIG:10.2.1.8:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 01:01:17,035:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:17,713:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 01:01:17,751:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 01:01:18,232:CONFIG:10.2.1.9:Ethernet1/2/1 is not a member of a port channel.
+2014-06-11 01:01:18,232:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:18,274:CONFIG:10.2.1.8:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 01:01:18,275:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:18,937:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 01:01:18,977:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 01:01:19,452:CONFIG:10.2.1.9:Ethernet1/2/2 is not a member of a port channel.
+2014-06-11 01:01:19,452:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:19,493:CONFIG:10.2.1.8:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 01:01:19,493:CONFIG:10.2.1.8:Adding host to inventory: DFWLABS9KB(FGE174702Y7)
+2014-06-11 01:01:20,168:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 01:01:20,204:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 01:01:20,686:CONFIG:10.2.1.9:Ethernet1/2/3 is not a member of a port channel.
+2014-06-11 01:01:20,686:CONFIG:10.2.1.9:Adding host to inventory: DFWLABS9KA(FGE174702XX)
+2014-06-11 01:01:20,718:CONFIG:10.2.1.8:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 01:01:20,718:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:21,389:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 01:01:21,903:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:21,931:CONFIG:10.2.1.9:Ethernet1/2/4 is not a member of a port channel.
+2014-06-11 01:01:21,932:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:23,069:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:24,121:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:24,234:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:25,565:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:01:27,798:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:07,248:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 01:03:07,248:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 01:03:07,910:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:07,963:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:09,086:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:09,153:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:10,278:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:10,344:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:11,507:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:03:11,573:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:00,117:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 01:04:00,117:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 01:04:00,767:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:00,836:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:01,942:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:02,013:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:03,116:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:03,185:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:04,288:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 01:04:04,353:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:40,569:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+2014-06-11 03:27:40,569:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+2014-06-11 03:27:41,221:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:41,287:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:42,401:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:42,490:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:43,825:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:44,649:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:45,064:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:27:45,874:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+2014-06-11 03:39:38,641:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9 --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:38,641:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8 --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:39,292:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:39,376:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:40,509:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:41,677:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:41,825:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:42,845:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:43,002:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+2014-06-11 03:39:44,175:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF) --- NXAPI_TOPO_BUILD --- 
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:33,009:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:33,009:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:33,664:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:33,733:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:34,862:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:34,931:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:36,104:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:36,267:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:37,275:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:53:37,434:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:22,191:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:22,191:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:22,862:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:22,919:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:24,048:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:24,118:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:25,274:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:25,337:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:26,452:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:55:26,521:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 03:55:28,116:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 03:55:28,116:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 03:55:28,119:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 03:55:28,119:CONFIG:10.2.1.9:Hello -------- 192.168.1.123
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:33,406:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:33,407:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:34,062:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:34,127:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:35,229:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:35,305:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:36,417:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:36,483:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:37,598:CONFIG:10.2.1.9:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_TOPO_BUILD ---  2014-06-11 03:57:37,662:CONFIG:10.2.1.8:Adding host to inventory: c9396(SAL1814PHJF)
+--- NXAPI_OSPF ---  2014-06-11 03:57:39,033:CONFIG:10.2.1.8:Connecting to host: 10.2.1.8
+--- NXAPI_OSPF ---  2014-06-11 03:57:39,034:CONFIG:10.2.1.8:Hello -------- 192.168.1.123
+--- NXAPI_OSPF ---  2014-06-11 03:57:39,035:CONFIG:10.2.1.9:Connecting to host: 10.2.1.9
+--- NXAPI_OSPF ---  2014-06-11 03:57:39,035:CONFIG:10.2.1.9:Hello -------- 192.168.1.123

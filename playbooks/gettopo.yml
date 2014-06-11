@@ -12,13 +12,17 @@
           passwd="Cisco.com"
           logfile="insieme.log"
       register: insieme
-    #- name: Show local spine host ID
-    #  debug: msg={{ insieme.topo.hostid }}
-    - name: Display CDP info
-      debug: msg={{ item.value }}
+    #- name: Show neighbors
+    #  debug: msg={{ item.value }}
+    #  with_dict: insieme.topo
+
+
+    #- name: Display CDP info
+    #debug: msg={{ item.value }}
     #debug: - "{{ item[0].ROW_cdp_neighbor_detail_info.version }}" }}
     #debug: msg={{ item.device_id }} on {{ item.intf_id }} managed via {{ item.v4mgmtaddr }}
-      with_dict: insieme.topo
+    
+
 
 - name: Verify OSPF
   hosts: spine
@@ -28,12 +32,12 @@
   tasks:
     - name: Verify OSPF Information
       nxapi_ospf:
-          host={{ inventory_hostname }}
-          user="admin"
-          passwd="Cisco.com"
-          logfile="insieme.log"
-          localPort={{ item.value.local_if }}
-          remotePort={{ item.value.remote_if }}
-          neighborIPv4={{ item.value.mgmt_ipv4 }}
+        host={{ inventory_hostname }}
+        user="admin"
+        passwd="Cisco.com"
+        logfile="insieme.log"
+        localPort={{ item.value.local_if }}
+        remotePort={{ item.value.remote_if }}
+        neighborIPv4={{ item.value.mgmt_ipv4 }}
       register: insieme.ospf
       with_dict: insieme.topo

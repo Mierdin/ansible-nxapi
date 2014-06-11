@@ -99,8 +99,10 @@ def main():
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
-        logging.basicConfig(filename=logfile, level=logging.INFO, \
-          format='%(asctime)s:%(name)s:%(message)s')
+        logging.basicConfig(filename=logfile, level=logging.INFO,
+                format='--- NXAPI_GET_FACTS --- ' + 
+                ' %(asctime)s:%(name)s:%(message)s')
+				
         logging.getLogger().name = 'CONFIG:'+m_args['host']
 
     logging.info("Connecting to host: {}".format(m_args['host']))

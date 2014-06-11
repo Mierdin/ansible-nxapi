@@ -89,12 +89,14 @@ def pcCheck(thisNXAPI, local_if):
 def getCDPNeighbors(thisNXAPI):
     #thisSwitchDict = dict()
     
+    #TODO: Decide if you still want to use host-id as key. Very valid approach,
+        #but warrants further consideration.
     thisNXAPI.set_cmd('show license host-id') #Using host-id as unique key
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    #hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
+    hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
     #thisSwitchDict['hostid'] = returnDict['ins_api']['outputs']['output'] \
-     #       ['body']['host_id']
+            #['body']['host_id']
 
 
     thisNXAPI.set_cmd('show cdp neigh det')
@@ -110,12 +112,6 @@ def getCDPNeighbors(thisNXAPI):
     #"N9K-C9396PX"
     #"N9K-C9508"
 
-    # Previously, I just returned the list located at: ['ins_api']['outputs'] \
-    # ['output']['body']['TABLE_cdp_neighbor_detail_info'] - instead, I am \
-    # carefully returning select information because the complexity involved \
-    # in writing a playbook with this much info was too much. (nested lists \
-    # and dictionaries). Instead, I'm returning my own dictionary from scratch
-
     # My "from scratch" dict, with only the info I need for this purpose.
 
     #getting rid of hostid for now, may want to re-enable
@@ -129,9 +125,8 @@ def getCDPNeighbors(thisNXAPI):
         
         if row['device_id'] in prunedInfo:
             continue #We already have this neighbor, no need to add it
-        elif row['platform_id'][:3] != 'N9K':
+        elif row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
             continue #We only want Nexus 9000s
-            #TODO: may want to prune this down even more to only include leaves
 
         logging.info("Adding host to inventory: {}".format(row['device_id']))
 
@@ -148,11 +143,29 @@ def getCDPNeighbors(thisNXAPI):
         remoteNXAPI.set_out_format('json')
         remoteNXAPI.set_msg_type('cli_show')
         
+        #TODO: Another reason for a re-design of this. I need to use \
+            # something to identify the remote switch, and right now \
+            # I have to connect to it and retrieve the host ID. Preference \
+            # would be to use some kind of property already available via \
+            # CDP on the local switch being accessed. Then all I would need \
+            # to do is have some kind of lookup that grabs the right creds \
+            # from a table using that parameter as a key. (another module)
+        remoteNXAPI.set_cmd('show license host-id') #Using host-id as unique key
+        returnList = remoteNXAPI.send_req()
+        returnDict = json.loads(returnList[1])
+        remoteHostid = returnDict['ins_api']['outputs']['output'] \
+                ['body']['host_id']
+    
         newItemDetails = dict()
         newItemDetails['local_if'] = pcCheck(thisNXAPI, row['intf_id'])
         newItemDetails['remote_if'] = pcCheck(remoteNXAPI, row['port_id'])
         newItemDetails['mgmt_ipv4'] = row['v4mgmtaddr']
-        prunedInfo[row['device_id']] = newItemDetails
+        
+        #Was doing this, but obviously won't work since it will keep \
+                # overwriting itself every time a neighbor comes up
+        #prunedInfo[hostid] = newItemDetails
+        prunedInfo[remoteHostid] = newItemDetails
+
 
     return prunedInfo
     #return thisSwitchDict
@@ -172,8 +185,10 @@ def main():
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
-        logging.basicConfig(filename=logfile, level=logging.INFO, \
-          format='%(asctime)s:%(name)s:%(message)s')
+        logging.basicConfig(filename=logfile, level=logging.INFO,
+                format='--- NXAPI_TOPO_BUILD --- ' + 
+                ' %(asctime)s:%(name)s:%(message)s')
+
         logging.getLogger().name = 'CONFIG:'+m_args['host']
 
     logging.info("Connecting to host: {}".format(m_args['host']))
