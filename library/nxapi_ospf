@@ -18,87 +18,90 @@ from nxos.nxapi.utils.nxapi_utils import NXAPI
 import logging
 import json
 
-def ospfVerify(thisNXAPI, localPort, remotePort, neighborIPv4):
-    """NeighborInfo is the dictionary for all leaves. 
-        thisNXAPI is existing connnection to spine switch.
-
-        Connects to both switches in a pair and validates OSPF operation
-    """
+#TODO: need to ask for username, password, etc instead of NXAPI session
+def getOSPFProps(thisNXAPI, ospfPort):
+    """Connects to a switch and retrieves OSPF properties"""
     
     ospfReport = dict()
+    ospfReport['details'] = dict()
 
-    logging.info("Hello -------- " + neighborIPv4)
-
-    #neighborInfo['localPort']
-    #neighborInfo['remotePort']
-    #neighborInfo['neighborIPv4']
+    thisNXAPI.set_cmd('show license host-id')
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+    ospfReport['hostid'] = returnDict['ins_api']['outputs']['output']['body']['host_id'][4:]
 
     #need to see if there is a neighbor on the other side
     #TODO: This is obviously catered for p2p links - need to \
             # be able to handle multiple neighbors
-    thisNXAPI.set_cmd('show ip ospf nei int ' + localPort)
+    thisNXAPI.set_cmd('show ip ospf nei int ' + ospfPort)
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
 
     try:
         neighborDict = returnDict['ins_api']['outputs']['output']['body'] \
                 ['TABLE_ctx']['ROW_ctx']['TABLE_nbr']['ROW_nbr']
-        ospfReport['state'] = neighborDict['state']
-        ospfReport['uptime'] = neighborDict['uptime']
+        ospfReport['details']['state'] = neighborDict['state']
+        ospfReport['details']['uptime'] = neighborDict['uptime']
 
     except KeyError: #This is thrown if there is no neighbor
-        ospfReport['nei_status'] = 'DOWN'
-        ospfReport['nei_uptime'] = 'none'
+        ospfReport['details']['nei_status'] = 'DOWN'
+        ospfReport['details']['nei_uptime'] = 'none'
 
 
     #time to gather more info
-    thisNXAPI.set_cmd('show ip ospf int ' + localPort)
+    #TODO: statically setting instance name here. Need to make an arg (ideal) 
+           # or loop through all potential instances (not ideal)
+    thisNXAPI.set_cmd('show ip ospf CLOS int ' + ospfPort)
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    for proc in returnDict['ins_api']['outputs']['output']['body'] \
-            ['TABLE_ctx']['ROW_ctx']:
-                #TODO: Note that ROW_ctx is a array. Shows up in other places 2
+    iface = returnDict['ins_api']['outputs']['output']['body'] \
+            ['TABLE_ctx']['ROW_ctx']['TABLE_intf']['ROW_intf']
+            #TODO: Note that ROW_ctx would be a list if we weren't
+                    #specifying the instance here.
         
-        # TODO: This is obviously bad, as it's statically setting the
-        # OSPF process name. Need to re-do to handle multiple processes.   
-        # best approach may be to specify the process name in the NXOS cmd
-        if proc['ptag'] == 'CLOS':
-            iface = proc['TABLE_intf']['ROW_intf']
+    #TODO: This all assumes only one interface and 
+    #one OSPF instance because I'm manually specifying 
+    #both in the NXOS command. Verify this is best approach
 
-            #Here I'm just capturing all I can about this interface to be
-            #compared with the other switch's interface.
-            ospfReport['ifname'] = iface['ifname']  
-            ospfReport['admin_status'] = iface['admin_status']  
-            ospfReport['proto_status'] = iface['proto_status']
-            ospfReport['addr'] = iface['addr']
-            ospfReport['masklen'] = iface['masklen']
-            ospfReport['hello_interval'] = iface['hello_interval']
-            ospfReport['dead_interval'] = iface['dead_interval']
-            #There is also a "wait_interval" parameter - check this out
-            ospfReport['auth_type'] = iface['auth_type']
-            ospfReport['area'] = iface['area']
-            #ospfReport[''] = iface['']
-            #ospfReport[''] = iface['']
+    #Here I'm just capturing all I can about this interface to be
+    #compared with the other switch's interface.
+    ospfReport['details']['ifname'] = iface['ifname']  
+    ospfReport['details']['admin_status'] = iface['admin_status']  
+    ospfReport['details']['proto_status'] = iface['proto_status']
+    ospfReport['details']['addr'] = iface['addr']
+    ospfReport['details']['masklen'] = iface['masklen']
+    ospfReport['details']['hello_interval'] = iface['hello_interval']
+    ospfReport['details']['dead_interval'] = iface['dead_interval']
+    #There is also a "wait_interval" parameter - check this out
+    ospfReport['details']['auth_type'] = iface['auth_type']
+    ospfReport['details']['area'] = iface['area']
     
     #need to gather area information now
     thisNXAPI.set_cmd('show ip ospf CLOS') 
     #TODO: static process again, either make dynamic here, or loop through all
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    
-    #TODO: That stupid ROW issue (list or not list, etc)
-    #for area in returnDict['ins_api']['outputs']['output']['body'] \
-           # ['TABLE_ctx']['ROW_ctx']['TABLE_area']['ROW_area'].iteritems():
-    area = returnDict['ins_api']['outputs']['output']['body']['TABLE_ctx'] \
-            ['ROW_ctx']['TABLE_area']['ROW_area']
-  
-    #if area['aname'] == ospfReport['area']: #want the area our port is in
-    ospfReport['area_stub'] = area['stub']
-    ospfReport['area_nssa'] = area['nssa']
-    #ospfReport['area_auth'] = area['auth_type'] # area auth?
-        #break
- 
 
+    try:
+        #TODO: That stupid ROW issue (list or not list, etc) came up.
+            #Statically defining path. pls re-visit and handle multiple areas 
+        areaDict = returnDict['ins_api']['outputs']['output']['body']['TABLE_ctx'] \
+                ['ROW_ctx']['TABLE_area']['ROW_area']
+        ospfReport['details']['area_stub'] = areaDict['stub']
+        ospfReport['details']['area_nssa'] = areaDict['nssa']
+        #ospfReport['area_auth'] = areaDict['auth_type'] # TODO: area auth?
+ 
+    except TypeError:
+        # ROW is not a dictionary, it is a list. Indicating multiple areas.
+        areas = returnDict['ins_api']['outputs']['output']['body'] \
+                 ['TABLE_ctx']['ROW_ctx']['TABLE_area']['ROW_area']
+
+        for area in areas:
+            if area['aname'] == ospfReport['details']['area']:
+                ospfReport['details']['area_stub'] = area['stub']
+                ospfReport['details']['area_nssa'] = area['nssa']
+                #ospfReport['area_auth'] = area['auth_type'] # TODO: area auth?
+ 
     return ospfReport
 
 
@@ -128,6 +131,9 @@ def main():
         logging.getLogger().name = 'CONFIG:'+m_args['host']
 
     logging.info("Connecting to host: {}".format(m_args['host']))
+    
+    
+    report = dict()
 
     thisNXAPI = NXAPI()
     thisNXAPI.set_target_url('http://' + m_args['host'] + '/ins')
@@ -136,10 +142,38 @@ def main():
     thisNXAPI.set_out_format('json')
     thisNXAPI.set_msg_type('cli_show')
 
-    m_results['ospfReport'] = ospfVerify(thisNXAPI, m_args['localPort'],
-            m_args['remotePort'], m_args['neighborIPv4'])
+    #Gather properties for local interface
+    report['local'] = getOSPFProps(thisNXAPI, m_args['localPort'])
+ 
+
+    remoteNXAPI = NXAPI()
+    remoteNXAPI.set_target_url('http://' + m_args['neighborIPv4'] + '/ins')
+    #TODO: Assumption that credentials are the same
+    remoteNXAPI.set_username(m_args['user'])
+    remoteNXAPI.set_password(m_args['passwd'])
+    remoteNXAPI.set_out_format('json')
+    remoteNXAPI.set_msg_type('cli_show')
+
+    #Gather properties for remote interface
+    report['remote'] = getOSPFProps(remoteNXAPI, m_args['remotePort'])
     
-    m_results['args'] = m_args        # for debug
+    m_results['ospf'] = dict()
+    #m_results['ospf'] = "Hello this is a test"
+
+    #TODO: did this before, need something new.
+    #m_results['ospf'][m_args['neighborIPv4']] = report
+    #the remote host ID is in the dict - use that.
+    
+    #TODO: Come up with a better way to retrieve this other than dipping into
+    #it's own dict
+    remoteID = report['remote']['hostid']
+    
+    #Using the remote switch's host ID to key off of reports
+    m_results['ospf'][remoteID] = report
+
+    #logging.info(m_results['ospf'][m_args['neighborIPv4']])
+
+    #m_results['args'] = m_args        # for debug
     module.exit_json(**m_results)
 
 from ansible.module_utils.basic import *

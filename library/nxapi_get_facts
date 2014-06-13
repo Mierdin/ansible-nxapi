@@ -84,6 +84,112 @@ def getRoutes(thisNXAPI):
     returnDict = json.loads(returnList[1])
     return returnDict['ins_api']['outputs']['output']['body']['TABLE_vrf']
 
+
+def pcCheck(thisNXAPI, local_if):
+    '''
+    Checks if an interface is part of a port channel.
+    If it is, this function returns the name of that port channel.
+    If not, then the original local_if argument is returned.
+    '''
+    
+    thisNXAPI.set_cmd('show interface ' + local_if)
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+
+    pcName = ""
+
+    try:
+        pcName = returnDict['ins_api']['outputs']['output']['body'] \
+                ['TABLE_interface']['ROW_interface']['eth_bundle']
+        #if key is present in dict, then port is a PC member
+    except KeyError:
+        logging.info (local_if + " is not a member of a port channel.")
+        return local_if
+    else:
+        return pcName
+
+def getCDPNeighbors(thisNXAPI):
+    #thisSwitchDict = dict()
+    
+    #TODO: Decide if you still want to use host-id as key. Very valid approach,
+        #but warrants further consideration.
+    thisNXAPI.set_cmd('show license host-id') #Using host-id as unique key
+    returnList = thisNXAPI.send_req()
+    returnDict = json.loads(returnList[1])
+    hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
+    #thisSwitchDict['hostid'] = returnDict['ins_api']['outputs']['output'] \
+            #['body']['host_id']
+
+
+    thisNXAPI.set_cmd('show cdp neigh det')
+    returnList = thisNXAPI.send_req()
+    #thisSwitchDict['neighborinfo'] = json.loads(returnList[1])['ins_api'] \
+    #        ['outputs']['output']['body']['TABLE_cdp_neighbor_detail_info'] \
+    #        ['ROW_cdp_neighbor_detail_info']
+
+    #TODO: Should really only get IP address and local interface here. \
+        # need to create another method that logs into that switch and
+        # flushes out this info in a table to be returned to this module.
+
+    #getting rid of hostid for now, may want to re-enable
+    #prunedInfo = dict(hostid=hostid)
+    prunedInfo = dict()
+	
+    for row in json.loads(returnList[1])['ins_api']['outputs']['output'] \
+        ['body']['TABLE_cdp_neighbor_detail_info'] \
+        ['ROW_cdp_neighbor_detail_info']:
+        
+        if row['device_id'] in prunedInfo:
+            continue #We already have this neighbor, no need to add it
+            #TODO: This obviously doesn't handle multiple routed paths to the
+            #same device, which we should be doing. Fix this.
+        elif row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
+            continue #We only want Nexus 9000s
+
+        logging.info("Adding host to inventory: {}".format(row['device_id']))
+
+        #prunedInfo['neighborinfo'] = dict()
+
+        #getting remote interface details
+        remoteNXAPI = NXAPI()
+        remoteNXAPI.set_target_url('http://' + row['v4mgmtaddr'] + '/ins')
+        
+        #TODO: Need to re-design this. What if this switch's creds are \
+                # not the same as the current node this module is running on?
+        remoteNXAPI.set_username('admin')
+        remoteNXAPI.set_password('Cisco.com')
+        remoteNXAPI.set_out_format('json')
+        remoteNXAPI.set_msg_type('cli_show')
+        
+        #TODO: Another reason for a re-design of this. I need to use \
+            # something to identify the remote switch, and right now \
+            # I have to connect to it and retrieve the host ID. Preference \
+            # would be to use some kind of property already available via \
+            # CDP on the local switch being accessed. Then all I would need \
+            # to do is have some kind of lookup that grabs the right creds \
+            # from a table using that parameter as a key. (another module)
+        remoteNXAPI.set_cmd('show license host-id') #Using host-id as unique key
+        returnList = remoteNXAPI.send_req()
+        returnDict = json.loads(returnList[1])
+        remoteHostid = returnDict['ins_api']['outputs']['output'] \
+                ['body']['host_id'][4:] #gets rid of the "VDH=
+
+        newItemDetails = dict()
+        newItemDetails['local_if'] = pcCheck(thisNXAPI, row['intf_id'])
+        newItemDetails['remote_if'] = pcCheck(remoteNXAPI, row['port_id'])
+        newItemDetails['mgmt_ipv4'] = row['v4mgmtaddr']
+        
+        #Was doing this, but obviously won't work since it will keep \
+                # overwriting itself every time a neighbor comes up
+        #prunedInfo[hostid] = newItemDetails
+        prunedInfo[remoteHostid] = newItemDetails
+
+
+    return prunedInfo
+    #return thisSwitchDict
+	
+	
+
 def main():
     module = AnsibleModule(
         argument_spec=dict( \
@@ -95,7 +201,8 @@ def main():
 
     m_args = module.params
     m_results = dict(changed=False)
-
+ 
+ 
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
@@ -107,6 +214,8 @@ def main():
 
     logging.info("Connecting to host: {}".format(m_args['host']))
 
+
+ 
     thisNXAPI = NXAPI()
     thisNXAPI.set_target_url('http://' + m_args['host'] + '/ins')
     thisNXAPI.set_username(m_args['user'])
@@ -116,14 +225,19 @@ def main():
 
     factDict = dict()
     factDict['HWFW'] = getHWFW(thisNXAPI)
-    factDict['routes'] = getRoutes(thisNXAPI)
+    
+    #TODO: Just too much extra overhead right now. Consider removing this
+    #factDict['routes'] = getRoutes(thisNXAPI)
     
     m_results['facts'] = factDict
+
+    m_results['topo'] = getCDPNeighbors(thisNXAPI)
+
+    logging.info(m_results['topo'])
 
     m_results['args'] = m_args        # for debug
     module.exit_json(**m_results)
 
 from ansible.module_utils.basic import *
 main()
-
 
