@@ -73,12 +73,14 @@ import json
 #import sys
 
 def getHWFW(thisNXAPI):
+    ''' Retrieves information about the switch's hardware/firmware '''
     thisNXAPI.set_cmd('show version')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
     return returnDict['ins_api']['outputs']['output']['body']
 
 def getRoutes(thisNXAPI):
+    ''' CURRENTLY UNUSED - retrieves all routes from the RIB '''
     thisNXAPI.set_cmd('show ip route')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
@@ -111,44 +113,51 @@ def pcCheck(thisNXAPI, local_if):
 def getCDPNeighbors(thisNXAPI):
     #thisSwitchDict = dict()
     
-    #TODO: Decide if you still want to use host-id as key. Very valid approach,
-        #but warrants further consideration.
-    thisNXAPI.set_cmd('show license host-id') #Using host-id as unique key
+    thisNXAPI.set_cmd('show license host-id')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    hostid = returnDict['ins_api']['outputs']['output']['body']['host_id']
-    #thisSwitchDict['hostid'] = returnDict['ins_api']['outputs']['output'] \
-            #['body']['host_id']
 
+
+    #TODO: host id is actually a great thing to use as a unique key, but you
+    # can actually pull this by parsing the device_id available via CDP.
+    # Need to rewrite this so that this value is pulled from that, rather than 
+    # by connecting to the remote switch.
+
+    hostid = returnDict['ins_api']['outputs']['output']['body'] \
+            ['host_id'][4:] #gets rid of the VDH=
+    #retrieving local host id for some reason. This should already be retrieved
+    #from normal fact gathering but who knows maybe you need this here too
 
     thisNXAPI.set_cmd('show cdp neigh det')
-    returnList = thisNXAPI.send_req()
-    #thisSwitchDict['neighborinfo'] = json.loads(returnList[1])['ins_api'] \
-    #        ['outputs']['output']['body']['TABLE_cdp_neighbor_detail_info'] \
-    #        ['ROW_cdp_neighbor_detail_info']
-
-    #TODO: Should really only get IP address and local interface here. \
-        # need to create another method that logs into that switch and
-        # flushes out this info in a table to be returned to this module.
+    returnList = thisNXAPI.send_req() 
 
     #getting rid of hostid for now, may want to re-enable
     #prunedInfo = dict(hostid=hostid)
     prunedInfo = dict()
-	
+    
+    #TODO: Doesn't currently handle multiple routed paths to the same switch. \
+            #need to do a pcCheck first thing, then you can see if a CDP \
+            # neighbor is truly a duplicate only if it shows up on the same \
+            # port channel interface (or an IF not in a lag)
+
+    #TODO: Assumes multiple CDP neighbors. Needs the ROW handling fix.
     for row in json.loads(returnList[1])['ins_api']['outputs']['output'] \
         ['body']['TABLE_cdp_neighbor_detail_info'] \
         ['ROW_cdp_neighbor_detail_info']:
         
+        #logging.info('asdf ---------- ' + prunedInfo)
+
+
         if row['device_id'] in prunedInfo:
+            logging.info(row['device_id'] + ' already in inventory')
             continue #We already have this neighbor, no need to add it
             #TODO: This obviously doesn't handle multiple routed paths to the
             #same device, which we should be doing. Fix this.
         elif row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
-            continue #We only want Nexus 9000s
+            logging.info('Not adding ' + row['platform_id'][:7])
+            continue #We only want Nexus 9000 leaf switches
 
         logging.info("Adding host to inventory: {}".format(row['device_id']))
-
-        #prunedInfo['neighborinfo'] = dict()
 
         #getting remote interface details
         remoteNXAPI = NXAPI()
@@ -161,6 +170,11 @@ def getCDPNeighbors(thisNXAPI):
         remoteNXAPI.set_out_format('json')
         remoteNXAPI.set_msg_type('cli_show')
         
+        #An idea for the re-design here is to maintain a topology table
+        #elsewhere of what ports go to what switches. Once facts are gathered
+        #from the entire topology, it would be fairly straightforward to go 
+        #back through that table and do your checks
+
         #TODO: Another reason for a re-design of this. I need to use \
             # something to identify the remote switch, and right now \
             # I have to connect to it and retrieve the host ID. Preference \
@@ -178,10 +192,11 @@ def getCDPNeighbors(thisNXAPI):
         newItemDetails['local_if'] = pcCheck(thisNXAPI, row['intf_id'])
         newItemDetails['remote_if'] = pcCheck(remoteNXAPI, row['port_id'])
         newItemDetails['mgmt_ipv4'] = row['v4mgmtaddr']
-        
-        #Was doing this, but obviously won't work since it will keep \
-                # overwriting itself every time a neighbor comes up
-        #prunedInfo[hostid] = newItemDetails
+
+        #Using REMOTE host ID as a unique key for this neighbor
+        #TODO: Obviously not ideal if there are multiple routed paths (not
+        #including multiple ports in a port channel) to the same neighbor. This
+        #will get overwritten in that case. 
         prunedInfo[remoteHostid] = newItemDetails
 
 
@@ -202,7 +217,6 @@ def main():
     m_args = module.params
     m_results = dict(changed=False)
  
- 
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
@@ -214,8 +228,6 @@ def main():
 
     logging.info("Connecting to host: {}".format(m_args['host']))
 
-
- 
     thisNXAPI = NXAPI()
     thisNXAPI.set_target_url('http://' + m_args['host'] + '/ins')
     thisNXAPI.set_username(m_args['user'])
@@ -224,17 +236,17 @@ def main():
     thisNXAPI.set_msg_type('cli_show')
 
     factDict = dict()
+    
+    logging.info('Now retrieving general facts')
     factDict['HWFW'] = getHWFW(thisNXAPI)
-    
-    #TODO: Just too much extra overhead right now. Consider removing this
-    #factDict['routes'] = getRoutes(thisNXAPI)
-    
     m_results['facts'] = factDict
 
+    logging.info('Now retrieving CDP neighbor information')
     m_results['topo'] = getCDPNeighbors(thisNXAPI)
 
-    logging.info(m_results['topo'])
-
+    #TODO: Just too much extra overhead right now. Consider removing this
+    #factDict['routes'] = getRoutes(thisNXAPI)
+ 
     m_results['args'] = m_args        # for debug
     module.exit_json(**m_results)
 

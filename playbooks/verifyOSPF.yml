@@ -13,6 +13,10 @@
           logfile="insieme.log"
       register: ins_facts
 
+    - name: DEBUG TOPO
+      debug: msg={{ item.value }}
+      with_dict: ins_facts
+
     - name: Verify OSPF Information
       nxapi_ospf:
         host={{ inventory_hostname }}

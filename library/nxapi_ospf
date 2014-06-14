@@ -28,11 +28,13 @@ def getOSPFProps(thisNXAPI, ospfPort):
     thisNXAPI.set_cmd('show license host-id')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    ospfReport['hostid'] = returnDict['ins_api']['outputs']['output']['body']['host_id'][4:]
+    ospfReport['hostid'] = returnDict['ins_api']['outputs']['output'] \
+            ['body']['host_id'][4:] #gets rid of the VDH=
 
     #need to see if there is a neighbor on the other side
-    #TODO: This is obviously catered for p2p links - need to \
-            # be able to handle multiple neighbors
+    #TODO: This is obviously catered for p2p links - consider \ 
+        #if it will be important to handle multiple neighbors \
+        # on a link. (I'm thinking not because of the spine leaf topo)
     thisNXAPI.set_cmd('show ip ospf nei int ' + ospfPort)
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
@@ -62,7 +64,8 @@ def getOSPFProps(thisNXAPI, ospfPort):
     #TODO: This all assumes only one interface and 
     #one OSPF instance because I'm manually specifying 
     #both in the NXOS command. Verify this is best approach
-
+    
+    #TODO: Need to ensure MTU matches as well.
     #Here I'm just capturing all I can about this interface to be
     #compared with the other switch's interface.
     ospfReport['details']['ifname'] = iface['ifname']  
