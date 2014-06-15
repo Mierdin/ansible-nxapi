@@ -103,7 +103,7 @@ def pcCheck(thisNXAPI, local_if):
     try:
         pcName = returnDict['ins_api']['outputs']['output']['body'] \
                 ['TABLE_interface']['ROW_interface']['eth_bundle']
-        #if key is present in dict, then port is a PC member
+        #if 'eth_bundle' key is present, then port is a PC member
     except KeyError:
         logging.info (local_if + " is not a member of a port channel.")
         return local_if
@@ -111,22 +111,19 @@ def pcCheck(thisNXAPI, local_if):
         return pcName
 
 def getCDPNeighbors(thisNXAPI):
-    #thisSwitchDict = dict()
     
     thisNXAPI.set_cmd('show license host-id')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
 
-
-    #TODO: host id is actually a great thing to use as a unique key, but you
-    # can actually pull this by parsing the device_id available via CDP.
-    # Need to rewrite this so that this value is pulled from that, rather than 
-    # by connecting to the remote switch.
-
-    hostid = returnDict['ins_api']['outputs']['output']['body'] \
+    #Pull local host ID
+    localHostID = returnDict['ins_api']['outputs']['output']['body'] \
             ['host_id'][4:] #gets rid of the VDH=
+
     #retrieving local host id for some reason. This should already be retrieved
     #from normal fact gathering but who knows maybe you need this here too
+
+    logging.info('Now pulling neighbor info from ' + localHostID)
 
     thisNXAPI.set_cmd('show cdp neigh det')
     returnList = thisNXAPI.send_req() 
@@ -147,17 +144,22 @@ def getCDPNeighbors(thisNXAPI):
         
         #logging.info('asdf ---------- ' + prunedInfo)
 
+        # If the switch is NOT a Nexus 9300, skip this device.
+        if row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
+            #logging.info('Not adding ' + row['platform_id'][:7])
+            continue
 
-        if row['device_id'] in prunedInfo:
+        # Extract host id from "device_id" field
+        remoteHostID = row['device_id'][row['device_id'].index('(')+1:-1]
+
+        # Skip if we already have this device listed in our table.
+        if remoteHostID in prunedInfo:
             logging.info(row['device_id'] + ' already in inventory')
             continue #We already have this neighbor, no need to add it
             #TODO: This obviously doesn't handle multiple routed paths to the
-            #same device, which we should be doing. Fix this.
-        elif row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
-            logging.info('Not adding ' + row['platform_id'][:7])
-            continue #We only want Nexus 9000 leaf switches
+            #same device, which we should be doing. Fix this.  
 
-        logging.info("Adding host to inventory: {}".format(row['device_id']))
+        logging.info("Adding host to inventory: {}".format(remoteHostID))
 
         #getting remote interface details
         remoteNXAPI = NXAPI()
@@ -182,12 +184,7 @@ def getCDPNeighbors(thisNXAPI):
             # CDP on the local switch being accessed. Then all I would need \
             # to do is have some kind of lookup that grabs the right creds \
             # from a table using that parameter as a key. (another module)
-        remoteNXAPI.set_cmd('show license host-id') #Using host-id as unique key
-        returnList = remoteNXAPI.send_req()
-        returnDict = json.loads(returnList[1])
-        remoteHostid = returnDict['ins_api']['outputs']['output'] \
-                ['body']['host_id'][4:] #gets rid of the "VDH=
-
+ 
         newItemDetails = dict()
         newItemDetails['local_if'] = pcCheck(thisNXAPI, row['intf_id'])
         newItemDetails['remote_if'] = pcCheck(remoteNXAPI, row['port_id'])
@@ -196,8 +193,10 @@ def getCDPNeighbors(thisNXAPI):
         #Using REMOTE host ID as a unique key for this neighbor
         #TODO: Obviously not ideal if there are multiple routed paths (not
         #including multiple ports in a port channel) to the same neighbor. This
-        #will get overwritten in that case. 
-        prunedInfo[remoteHostid] = newItemDetails
+        #will get overwritten in that case. Maybe use hostid + interface id?
+        #look into ifindex in CDP
+        #note that device_id only contains hostid if it's another 9K it seems
+        prunedInfo[remoteHostID] = newItemDetails
 
 
     return prunedInfo
