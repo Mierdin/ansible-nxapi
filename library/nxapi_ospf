@@ -1,5 +1,8 @@
 #!/usr/bin/env python2.7
 
+#TODO: Insert documentation and PEP8 compliant docstring
+''' Docstring here '''
+
 # Copyright (c) 2014 Matt Oswalt
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +17,21 @@
 # implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-from nxos.nxapi.utils.nxapi_utils import NXAPI
+#TODO: Lots of invalid variables. Need to decide on nomenclature
+
+#TODO: need to find all instances in this repo where you’re pulling host ID (one is not used at all) and make them the [4:] version
+
+#TODO: dependency on new library. Re-enable old line for current testing.
+from cisco.nxapi.nxapiutils.nxapi_utils import NXAPI
+#from nxos.nxapi.utils.nxapi_utils import NXAPI
 import logging
 import json
 
-#TODO: need to ask for username, password, etc instead of NXAPI session
-def getOSPFProps(thisNXAPI, ospfPort):
+#TODO: need to ask for username, password, etc instead of NXAPI session (why)
+#TODO: rename this to something not stupid
+def getospfprops(thisNXAPI, ospfPort):
     """Connects to a switch and retrieves OSPF properties"""
-    
+
     ospfReport = dict()
     ospfReport['details'] = dict()
 
@@ -32,8 +42,9 @@ def getOSPFProps(thisNXAPI, ospfPort):
             ['body']['host_id'][4:] #gets rid of the VDH=
 
     #need to see if there is a neighbor on the other side
-    #TODO: This is obviously catered for p2p links - consider \ 
-        #if it will be important to handle multiple neighbors \
+
+    #TODO: This is obviously catered for p2p links - consider 
+        #if it will be important to handle multiple neighbors
         # on a link. (I'm thinking not because of the spine leaf topo)
     thisNXAPI.set_cmd('show ip ospf nei int ' + ospfPort)
     returnList = thisNXAPI.send_req()
@@ -60,16 +71,16 @@ def getOSPFProps(thisNXAPI, ospfPort):
             ['TABLE_ctx']['ROW_ctx']['TABLE_intf']['ROW_intf']
             #TODO: Note that ROW_ctx would be a list if we weren't
                     #specifying the instance here.
-        
+
     #TODO: This all assumes only one interface and 
     #one OSPF instance because I'm manually specifying 
     #both in the NXOS command. Verify this is best approach
-    
+
     #TODO: Need to ensure MTU matches as well.
     #Here I'm just capturing all I can about this interface to be
     #compared with the other switch's interface.
-    ospfReport['details']['ifname'] = iface['ifname']  
-    ospfReport['details']['admin_status'] = iface['admin_status']  
+    ospfReport['details']['ifname'] = iface['ifname']
+    ospfReport['details']['admin_status'] = iface['admin_status']
     ospfReport['details']['proto_status'] = iface['proto_status']
     ospfReport['details']['addr'] = iface['addr']
     ospfReport['details']['masklen'] = iface['masklen']
@@ -78,22 +89,22 @@ def getOSPFProps(thisNXAPI, ospfPort):
     #There is also a "wait_interval" parameter - check this out
     ospfReport['details']['auth_type'] = iface['auth_type']
     ospfReport['details']['area'] = iface['area']
-    
+
     #need to gather area information now
-    thisNXAPI.set_cmd('show ip ospf CLOS') 
+    thisNXAPI.set_cmd('show ip ospf CLOS')
     #TODO: static process again, either make dynamic here, or loop through all
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
 
     try:
         #TODO: That stupid ROW issue (list or not list, etc) came up.
-            #Statically defining path. pls re-visit and handle multiple areas 
-        areaDict = returnDict['ins_api']['outputs']['output']['body']['TABLE_ctx'] \
-                ['ROW_ctx']['TABLE_area']['ROW_area']
+            #Statically defining path. pls re-visit and handle multiple areas
+        areaDict = returnDict['ins_api']['outputs']['output']['body'] \
+            ['TABLE_ctx']['ROW_ctx']['TABLE_area']['ROW_area']
         ospfReport['details']['area_stub'] = areaDict['stub']
         ospfReport['details']['area_nssa'] = areaDict['nssa']
         #ospfReport['area_auth'] = areaDict['auth_type'] # TODO: area auth?
- 
+
     except TypeError:
         # ROW is not a dictionary, it is a list. Indicating multiple areas.
         areas = returnDict['ins_api']['outputs']['output']['body'] \
@@ -104,7 +115,7 @@ def getOSPFProps(thisNXAPI, ospfPort):
                 ospfReport['details']['area_stub'] = area['stub']
                 ospfReport['details']['area_nssa'] = area['nssa']
                 #ospfReport['area_auth'] = area['auth_type'] # TODO: area auth?
- 
+
     return ospfReport
 
 
@@ -127,15 +138,14 @@ def main():
     #Configure logging
     logfile = module.params.get('logfile')
     if logfile is not None:
-        logging.basicConfig(filename=logfile, level=logging.INFO,
-                format='--- NXAPI_OSPF --- ' + 
+        logging.basicConfig(filename=logfile, level=logging.INFO, \
+                format='--- NXAPI_OSPF --- ' + \
                 ' %(asctime)s:%(name)s:%(message)s')
-				
+
         logging.getLogger().name = 'CONFIG:'+m_args['host']
 
     logging.info("Connecting to host: {}".format(m_args['host']))
-    
-    
+
     report = dict()
 
     thisNXAPI = NXAPI()
@@ -146,8 +156,8 @@ def main():
     thisNXAPI.set_msg_type('cli_show')
 
     #Gather properties for local interface
-    report['local'] = getOSPFProps(thisNXAPI, m_args['localPort'])
- 
+    report['local'] = getospfprops(thisNXAPI, m_args['localPort'])
+
 
     remoteNXAPI = NXAPI()
     remoteNXAPI.set_target_url('http://' + m_args['neighborIPv4'] + '/ins')
@@ -158,19 +168,19 @@ def main():
     remoteNXAPI.set_msg_type('cli_show')
 
     #Gather properties for remote interface
-    report['remote'] = getOSPFProps(remoteNXAPI, m_args['remotePort'])
-    
+    report['remote'] = getospfprops(remoteNXAPI, m_args['remotePort'])
+
     m_results['ospf'] = dict()
     #m_results['ospf'] = "Hello this is a test"
 
     #TODO: did this before, need something new.
     #m_results['ospf'][m_args['neighborIPv4']] = report
     #the remote host ID is in the dict - use that.
-    
+
     #TODO: Come up with a better way to retrieve this other than dipping into
     #it's own dict
     remoteID = report['remote']['hostid']
-    
+
     #Using the remote switch's host ID to key off of reports
     m_results['ospf'][remoteID] = report
 
