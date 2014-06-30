@@ -1,7 +1,6 @@
 #!/usr/bin/env python2.7
 
-#TODO: Insert pep8 compliant docstring
-''' docstring here '''
+''' An Ansible module to gather facts from a Cisco Nexus 9000 switch '''
 
 # Copyright (c) 2014 Matt Oswalt
 #
@@ -72,13 +71,9 @@ EXAMPLES = '''
 #TODO: dependency on new library. Re-enable old line for current testing.
 from cisco.nxapi.nxapiutils.nxapi_utils import NXAPI
 #from nxos.nxapi.utils.nxapi_utils import NXAPI
-#rom collections import OrderedDict
-#from array import *
+
 import logging
 import json
-#from os.path import isfile
-#import os
-#import sys
 
 
 def getHWFW(thisNXAPI):
@@ -87,19 +82,12 @@ def getHWFW(thisNXAPI):
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
 
-    #Masking Host ID TODO: remove after demo
+    #Masking Host ID TODO: re-enable this after demo (and delete modDict)
     #return returnDict['ins_api']['outputs']['output']['body']
 
     modDict = returnDict['ins_api']['outputs']['output']['body']
     modDict['proc_board_id'] = 'XXXXXXXX' + modDict['proc_board_id'][-3:]
     return modDict
-
-def getRoutes(thisNXAPI):
-    ''' CURRENTLY UNUSED - retrieves all routes from the RIB '''
-    thisNXAPI.set_cmd('show ip route')
-    returnList = thisNXAPI.send_req()
-    returnDict = json.loads(returnList[1])
-    return returnDict['ins_api']['outputs']['output']['body']['TABLE_vrf']
 
 
 def pcCheck(thisNXAPI, local_if):
@@ -138,15 +126,16 @@ def getCDPNeighbors(thisNXAPI):
     #TODO: remove after demo
     localHostID = 'XXXXXXXX' + localHostID[-3:]
 
-    #retrieving local host id for some reason. This should already be retrieved
-    #from normal fact gathering but who knows maybe you need this here too
+    #TODO: retrieving local host id for some reason. This should already be 
+    # retrieved from normal fact gathering but who knows maybe you need this 
+    # here too
 
     logging.info('Now pulling neighbor info from ' + localHostID)
 
     thisNXAPI.set_cmd('show cdp neigh det')
     returnList = thisNXAPI.send_req() 
 
-    #getting rid of hostid for now, may want to re-enable
+    #TODO: getting rid of hostid for now, may want to re-enable
     #prunedInfo = dict(hostid=hostid)
     prunedInfo = dict()
 
@@ -160,10 +149,8 @@ def getCDPNeighbors(thisNXAPI):
         ['body']['TABLE_cdp_neighbor_detail_info'] \
         ['ROW_cdp_neighbor_detail_info']:
 
-        #logging.info('asdf ---------- ' + prunedInfo)
-
         # If the switch is NOT a Nexus 9300, skip this device.
-        if row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID
+        if row['platform_id'][:7] != 'N9K-C93': #TODO: Find another way to ID?
             #logging.info('Not adding ' + row['platform_id'][:7])
             continue
 
@@ -219,11 +206,7 @@ def getCDPNeighbors(thisNXAPI):
         #note that device_id only contains hostid if it's another 9K it seems
         prunedInfo[remoteHostID] = newItemDetails
 
-
     return prunedInfo
-    #return thisSwitchDict
-
-
 
 def main():
     module = AnsibleModule(
@@ -263,9 +246,6 @@ def main():
 
     logging.info('Now retrieving CDP neighbor information')
     m_results['topo'] = getCDPNeighbors(thisNXAPI)
-
-    #TODO: Just too much extra overhead right now. Consider removing this
-    #factDict['routes'] = getRoutes(thisNXAPI)
 
     m_results['args'] = m_args        # for debug
     module.exit_json(**m_results)

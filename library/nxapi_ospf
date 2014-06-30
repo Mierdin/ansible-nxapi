@@ -48,35 +48,18 @@ options:
 '''
 
 EXAMPLES = '''
-# pulling down facts via NX-API
-
-- nxapi_get_facts:
-    host={{ inventory_hostname }}
-    user="admin"
-    passwd="cisco"
-    logfile="insieme.log"
-  register: insieme
-
-# accessing the facts
-
-- name: NX-OS version
-  debug: msg="{{ insieme.facts.HWFW.rr_sys_ver }}"
+#TODO: Fill out examples
 '''
 
-
-
-#TODO: Lots of invalid variables. Need to decide on nomenclature
-
-#TODO: Need to make sure all the host IDs get rid of VDH=
+#TODO: make var names pep8 compliant
 
 #TODO: dependency on new library. Re-enable old line for current testing.
 from cisco.nxapi.nxapiutils.nxapi_utils import NXAPI
 #from nxos.nxapi.utils.nxapi_utils import NXAPI
+
 import logging
 import json
 
-#TODO: need to ask for username, password, etc instead of NXAPI session (why)
-#TODO: rename this to something not stupid
 def getospfprops(thisNXAPI, ospfPort):
     """Connects to a switch and retrieves OSPF properties"""
 
@@ -92,8 +75,7 @@ def getospfprops(thisNXAPI, ospfPort):
     #TODO: Remove after demo
     ospfReport['hostid'] = 'XXXXXXXX' + ospfReport['hostid'][-3:]
 
-    #need to see if there is a neighbor on the other side
-
+    #checking to see if there is a neighbor on the other side
     #TODO: This is obviously catered for p2p links - consider 
         #if it will be important to handle multiple neighbors
         # on a link. (I'm thinking not because of the spine leaf topo)
@@ -137,11 +119,11 @@ def getospfprops(thisNXAPI, ospfPort):
     ospfReport['details']['masklen'] = iface['masklen']
     ospfReport['details']['hello_interval'] = iface['hello_interval']
     ospfReport['details']['dead_interval'] = iface['dead_interval']
-    #There is also a "wait_interval" parameter - check this out
+    #TODO: There is also a "wait_interval" parameter - what is this?
     ospfReport['details']['auth_type'] = iface['auth_type']
     ospfReport['details']['area'] = iface['area']
 
-    #need to gather area information now
+    #gather area information now
     thisNXAPI.set_cmd('show ip ospf CLOS')
     #TODO: static process again, either make dynamic here, or loop through all
     returnList = thisNXAPI.send_req()
@@ -157,7 +139,7 @@ def getospfprops(thisNXAPI, ospfPort):
         #ospfReport['area_auth'] = areaDict['auth_type'] # TODO: area auth?
 
     except TypeError:
-        # ROW is not a dictionary, it is a list. Indicating multiple areas.
+        # ROW is not a dictionary, it is a list. This indicates multiple areas.
         areas = returnDict['ins_api']['outputs']['output']['body'] \
                  ['TABLE_ctx']['ROW_ctx']['TABLE_area']['ROW_area']
 
@@ -176,10 +158,6 @@ def main():
             host=dict(required=True), \
             user=dict(required=False, default='admin'), \
             passwd=dict(required=False, default=None), \
-            #operation=dict(required=True, default=None), \
-            #localPort=dict(required=True, default=None), \
-            #remotePort=dict(required=True, default=None), \
-            #neighborIPv4=dict(required=True, default=None), \
             neighborInfo=dict(required=True, default=None), \
             logfile=dict(required=False, default=None)), \
         supports_check_mode=False)
