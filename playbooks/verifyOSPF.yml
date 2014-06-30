@@ -15,7 +15,7 @@
 
     - name: DEBUG TOPO
       debug: msg={{ item.value }}
-      with_dict: ins_facts
+      with_dict: ins_facts.topo
 
     - name: Verify OSPF Information
       nxapi_ospf:
@@ -23,55 +23,50 @@
         user="admin"
         passwd="Cisco.com"
         logfile="insieme.log"
-        localPort={{ ins_facts.topo.SAL1814PHJF.local_if }}
-        remotePort={{ ins_facts.topo.SAL1814PHJF.remote_if }}
-        neighborIPv4={{ ins_facts.topo.SAL1814PHJF.mgmt_ipv4 }}
-        #localPort={{ item.value.local_if }}
-        #remotePort={{ item.value.remote_if }}
-        #neighborIPv4={{ item.value.mgmt_ipv4 }}
+        localPort={{ item.value.local_if }}
+        remotePort={{ item.value.remote_if }}
+        neighborIPv4={{ item.value.mgmt_ipv4 }}
       register: ins_ospf
-      #with_dict: ins_facts.topo
-        # SAL1814PHJF is host id of leaf switch. Need to get this dict working
-        # so you can do multiple leaves
+      with_dict: ins_facts.topo
 
     - name: OSPF info dump
-      debug: msg={{ item.value }}
-      with_dict: ins_ospf.ospf
+      debug: msg={{ item.ospf.XXXXXXXXHJF }}
+      with_items: ins_ospf.results
 
     - name: Area check
       debug: msg="*** OSPF AREAS DO NOT MATCH ***"
-      when:  item.value.local.details.area  !=  item.value.remote.details.area  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.area  !=  item.ospf.XXXXXXXXHJF.remote.details.area  
+      with_items: ins_ospf.results
 
     - name: Subnet check
       #obviously not comprehensive - may need to write "subnet checker" module
       debug: msg="*** OSPF SUBNETS DO NOT MATCH ***"
-      when:  item.value.local.details.masklen  !=  item.value.remote.details.masklen  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.masklen  !=  item.ospf.XXXXXXXXHJF.remote.details.masklen  
+      with_items: ins_ospf.results
 
     - name: Hello Timer Check
       debug: msg="*** HELLO TIMERS DO NOT MATCH ***"
-      when:  item.value.local.details.hello_interval  !=  item.value.remote.details.hello_interval  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.hello_interval  !=  item.ospf.XXXXXXXXHJF.remote.details.hello_interval  
+      with_items: ins_ospf.results
 
     - name: Dead Timer Check
       debug: msg="*** DEAD TIMERS DO NOT MATCH ***"
-      when:  item.value.local.details.dead_interval  !=  item.value.remote.details.dead_interval  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.dead_interval  !=  item.ospf.XXXXXXXXHJF.remote.details.dead_interval  
+      with_items: ins_ospf.results
 
     - name: Stub Flag Check
       debug: msg="*** STUB FLAGS DO NOT MATCH ***"
-      when:  item.value.local.details.area_stub  !=  item.value.remote.details.area_stub  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.area_stub  !=  item.ospf.XXXXXXXXHJF.remote.details.area_stub
+      with_items: ins_ospf.results
 
     - name: NSSA Flag Check
       debug: msg="*** NSSA FLAGS DO NOT MATCH ***"
-      when:  item.value.local.details.area_nssa  !=  item.value.remote.details.area_nssa  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.area_nssa  !=  item.ospf.XXXXXXXXHJF.remote.details.area_nssa  
+      with_items: ins_ospf.results
 
     - name: Auth Check
       debug: msg="*** AUTH METHODS DO NOT MATCH ***"
-      when:  item.value.local.details.auth_type  !=  item.value.remote.details.auth_type  
-      with_dict: ins_ospf.ospf
+      when:  item.ospf.XXXXXXXXHJF.local.details.auth_type  !=  item.ospf.XXXXXXXXHJF.remote.details.auth_type  
+      with_items: ins_ospf.results
 
 
