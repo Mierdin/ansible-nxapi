@@ -80,12 +80,19 @@ import json
 #import os
 #import sys
 
+
 def getHWFW(thisNXAPI):
     ''' Retrieves information about the switch's hardware/firmware '''
     thisNXAPI.set_cmd('show version')
     returnList = thisNXAPI.send_req()
     returnDict = json.loads(returnList[1])
-    return returnDict['ins_api']['outputs']['output']['body']
+
+    #Masking Host ID TODO: remove after demo
+    #return returnDict['ins_api']['outputs']['output']['body']
+
+    modDict = returnDict['ins_api']['outputs']['output']['body']
+    modDict['proc_board_id'] = 'XXXXXXXX' + modDict['proc_board_id'][-3:]
+    return modDict
 
 def getRoutes(thisNXAPI):
     ''' CURRENTLY UNUSED - retrieves all routes from the RIB '''
@@ -127,6 +134,9 @@ def getCDPNeighbors(thisNXAPI):
     #Pull local host ID
     localHostID = returnDict['ins_api']['outputs']['output']['body'] \
             ['host_id'][4:] #gets rid of the VDH=
+    
+    #TODO: remove after demo
+    localHostID = 'XXXXXXXX' + localHostID[-3:]
 
     #retrieving local host id for some reason. This should already be retrieved
     #from normal fact gathering but who knows maybe you need this here too
@@ -159,6 +169,9 @@ def getCDPNeighbors(thisNXAPI):
 
         # Extract host id from "device_id" field
         remoteHostID = row['device_id'][row['device_id'].index('(')+1:-1]
+
+        #TODO: Remove after demo
+        remoteHostID = 'XXXXXXXX' + remoteHostID[-3:]
 
         # Skip if we already have this device listed in our table.
         if remoteHostID in prunedInfo:

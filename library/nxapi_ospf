@@ -19,7 +19,7 @@
 
 #TODO: Lots of invalid variables. Need to decide on nomenclature
 
-#TODO: need to find all instances in this repo where you’re pulling host ID (one is not used at all) and make them the [4:] version
+#TODO: Need to make sure all the host IDs get rid of VDH=
 
 #TODO: dependency on new library. Re-enable old line for current testing.
 from cisco.nxapi.nxapiutils.nxapi_utils import NXAPI
