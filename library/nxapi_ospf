@@ -1,7 +1,6 @@
 #!/usr/bin/env python2.7
 
-#TODO: Insert documentation and PEP8 compliant docstring
-''' Docstring here '''
+''' An Ansible module to perform various OSPF tasks on Nexus 9000 '''
 
 # Copyright (c) 2014 Matt Oswalt
 #
@@ -16,6 +15,55 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
 # implied. See the License for the specific language governing
 # permissions and limitations under the License.
+
+DOCUMENTATION = '''
+---
+module: nxapi_ospf
+author: Matt Oswalt
+version_added: 1.0
+short_description: Verify OSPF on Nexus 9000 switches
+description:
+    - A module to verify OSPF operation on Nexus 9000 switches
+requirements:
+    - Mierdin's fork of nexus9000 https://github.com/Mierdin/nexus9000
+options:
+    host:
+        description:
+            - should be {{ inventory_hostname }}
+        required: true  
+    user:
+        description:
+            - login user-name 
+        required: true
+        default: "admin"
+    passwd:
+        description:
+            - login password
+        required: true               
+    logfile:
+        description:
+            - location for log file
+        required: false 
+        default: None        
+'''
+
+EXAMPLES = '''
+# pulling down facts via NX-API
+
+- nxapi_get_facts:
+    host={{ inventory_hostname }}
+    user="admin"
+    passwd="cisco"
+    logfile="insieme.log"
+  register: insieme
+
+# accessing the facts
+
+- name: NX-OS version
+  debug: msg="{{ insieme.facts.HWFW.rr_sys_ver }}"
+'''
+
+
 
 #TODO: Lots of invalid variables. Need to decide on nomenclature
 
@@ -129,9 +177,10 @@ def main():
             user=dict(required=False, default='admin'), \
             passwd=dict(required=False, default=None), \
             #operation=dict(required=True, default=None), \
-            localPort=dict(required=True, default=None), \
-            remotePort=dict(required=True, default=None), \
-            neighborIPv4=dict(required=True, default=None), \
+            #localPort=dict(required=True, default=None), \
+            #remotePort=dict(required=True, default=None), \
+            #neighborIPv4=dict(required=True, default=None), \
+            neighborInfo=dict(required=True, default=None), \
             logfile=dict(required=False, default=None)), \
         supports_check_mode=False)
 
@@ -149,6 +198,8 @@ def main():
 
     logging.info("Connecting to host: {}".format(m_args['host']))
 
+    logging.info(m_args['neighborInfo'])
+
     report = dict()
 
     thisNXAPI = NXAPI()
@@ -159,11 +210,11 @@ def main():
     thisNXAPI.set_msg_type('cli_show')
 
     #Gather properties for local interface
-    report['local'] = getospfprops(thisNXAPI, m_args['localPort'])
+    report['local'] = getospfprops(thisNXAPI, m_args['neighborInfo']['local_if'])
 
 
     remoteNXAPI = NXAPI()
-    remoteNXAPI.set_target_url('http://' + m_args['neighborIPv4'] + '/ins')
+    remoteNXAPI.set_target_url('http://' + m_args['neighborInfo']['mgmt_ipv4'] + '/ins')
     #TODO: Assumption that credentials are the same
     remoteNXAPI.set_username(m_args['user'])
     remoteNXAPI.set_password(m_args['passwd'])
@@ -171,23 +222,12 @@ def main():
     remoteNXAPI.set_msg_type('cli_show')
 
     #Gather properties for remote interface
-    report['remote'] = getospfprops(remoteNXAPI, m_args['remotePort'])
+    report['remote'] = getospfprops(remoteNXAPI, m_args['neighborInfo']['remote_if'])
 
     m_results['ospf'] = dict()
-    #m_results['ospf'] = "Hello this is a test"
-
-    #TODO: did this before, need something new.
-    #m_results['ospf'][m_args['neighborIPv4']] = report
-    #the remote host ID is in the dict - use that.
-
-    #TODO: Come up with a better way to retrieve this other than dipping into
-    #it's own dict
-    remoteID = report['remote']['hostid']
 
     #Using the remote switch's host ID to key off of reports
-    m_results['ospf'][remoteID] = report
-
-    #logging.info(m_results['ospf'][m_args['neighborIPv4']])
+    m_results['ospf'][report['remote']['hostid']] = report
 
     #m_results['args'] = m_args        # for debug
     module.exit_json(**m_results)

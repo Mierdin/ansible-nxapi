@@ -18,14 +18,13 @@
       with_dict: ins_facts.topo
 
     - name: Verify OSPF Information
-      nxapi_ospf:
-        host={{ inventory_hostname }}
-        user="admin"
-        passwd="Cisco.com"
-        logfile="insieme.log"
-        localPort={{ item.value.local_if }}
-        remotePort={{ item.value.remote_if }}
-        neighborIPv4={{ item.value.mgmt_ipv4 }}
+      action: nxapi_ospf
+      args:
+        host: "{{ inventory_hostname }}"
+        user: "admin"
+        passwd: "Cisco.com"
+        logfile: "insieme.log"
+        neighborInfo: "{{ item.value }}"
       register: ins_ospf
       with_dict: ins_facts.topo
 
