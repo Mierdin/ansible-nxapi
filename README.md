@@ -1,6 +1,6 @@
 ## ABOUT
 
-Ansible modules to support Junos network build automation use-cases.  Developed for Ansible 1.5.  This library is not currently part of the Ansible distribution.  Please refer to [INSTALLATION](#installation) section for setup.
+Ansible modules for Cisco Nexus 9000.  Developed for Ansible 1.5.  This library is not currently part of the Ansible distribution.  Please refer to [INSTALLATION](#installation) section for setup.
 
 ## OVERVIEW OF MODULES
 
@@ -20,7 +20,9 @@ This will set your `$ANSIBLE_LIBRARY` variable to the repo location and the inst
 ````
 Alternatively you can copy the files in the [library](library) directory into the ansible installed directory: library/net_infrastructure
 
+
 ## DEPENDENCIES
+
 
 Thes modules require the following to be installed on the Ansible server:
 
